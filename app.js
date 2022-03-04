@@ -22,7 +22,6 @@ const activateDots = count => {
 
 window.addEventListener('load', () => {
   /* NAVBAR LOGIC */
-  console.log(document.querySelector('.barsContainer'))
   document.querySelector('.barsContainer').addEventListener('click', () => {
     document
       .querySelector('.navbar_listContainer')
@@ -135,22 +134,31 @@ window.addEventListener('load', () => {
 
   const sections = document.querySelectorAll('section')
 
-  // const observer = new IntersectionObserver(
-  //   (entries, observer) => {
-  //     const [entry] = entries
-  //     if (!entry.isIntersecting) return
-  //     entry.target.classList.remove('hidden')
-  //     observer.unobserve(entry.target)
-  //   },
-  //   { root: null, threshold: 0.05 }
-  // )
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      const [entry] = entries
+      if (!entry.isIntersecting) return
+      entry.target.classList.remove('hidden')
+      observer.unobserve(entry.target)
+    },
+    { root: null, threshold: 0.05 }
+  )
 
-  // sections.forEach(section => {
-  //   section.classList.add('hidden')
-  //   observer.observe(section)
-  // })
+  sections.forEach(section => {
+    section.classList.add('hidden')
+    observer.observe(section)
+  })
 
   /*GET FOOTER YEAR */
-
   document.querySelector('.getYear').textContent = new Date().getFullYear()
+
+  //SECTIONS NAVIGATION LOGIC
+  document.querySelectorAll('.navigLink').forEach(link => {
+    const href = link.getAttribute('href')
+    const id = href.replace('#', '')
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+    })
+  })
 })

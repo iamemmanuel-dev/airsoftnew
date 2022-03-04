@@ -19,7 +19,8 @@
   --main_white: #fff;
   --main_black: #080613;
   --main_blue: #140dae;
-  --main_color: rgb(0, 218, 0);
+  /* --main_color: rgb(0, 218, 0); */
+  --main_color: #140dae;
 
   --transition: all 0.3s linear;
 }
@@ -170,7 +171,7 @@ input {
 .mainHeader_content {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   z-index: 5;
   animation: fadeIn 3.5s linear;
 }
@@ -415,6 +416,10 @@ input {
 PORTFOLIO SECTION
 */
 
+#portfolioSection {
+  padding-bottom: 0;
+}
+
 .portfolio_row {
   margin-top: 5rem;
 }
@@ -473,6 +478,10 @@ PORTFOLIO SECTION
 /*
   TESTIMONIALS SECTION
 */
+
+#testimonialSection {
+  padding-top: 4rem;
+}
 
 .testimonialContainer {
   display: flex;
@@ -656,7 +665,6 @@ PORTFOLIO SECTION
 #contactSection {
   background: url('./assets//images/Artboard_14-removebg-preview.png') no-repeat
     center/cover;
-  /* height: 100vh; */
 }
 
 .contactHead {
@@ -664,6 +672,7 @@ PORTFOLIO SECTION
   font: 600 2rem var(--primary_font);
   max-width: 60rem;
   margin: 0 auto;
+  backdrop-filter: blur(20px);
 }
 
 .contactCenter {
@@ -886,17 +895,18 @@ textarea {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(0);
+    /* transform: ; */
+    transform: scale(0), translateY(-50%);
   }
 
   50% {
     opacity: 0.35;
-    transform: scale(0.5);
+    transform: scale(0.5), translateY(-50%);
   }
 
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1), translateY(-50%);
   }
 }
 
@@ -1151,6 +1161,7 @@ PORTFOLIO SECTION
 
   .galleryBox_row > * {
     flex-basis: 45%;
+    /* color: */
   }
 
   .galleryBtn {
