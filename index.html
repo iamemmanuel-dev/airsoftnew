@@ -10,10 +10,6 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -32,17 +28,16 @@
           <div class="navbarCenter">
             <div class="navbarHeader">
               <img src="/assets/images/logo.png" alt="logo" class="logo" />
-              <div class="barsContainer">
+              <!-- <div class="barsContainer">
                 <span></span>
                 <span></span>
                 <span></span>
-              </div>
+              </div> -->
+              <button class="bars">
+                <i class="fas fa-bars"></i>
+              </button>
             </div>
             <ul class="navbar_listContainer">
-              <li class="navbar_list">
-                <a href="#mainHeader" class="navbar_link navigLink">Home</a>
-              </li>
-
               <li class="navbar_list">
                 <a href="#aboutSection" class="navbar_link navigLink"
                   >About us</a
@@ -70,29 +65,21 @@
           </div>
         </nav>
 
-        <div class="mainHeader_content">
-          <h1 class="mainHeader_mainTitle">
-            Airsoft <span class="color_this">Studios</span>
-          </h1>
-          <h2 class="mainHeader_subTitle">
-            Discover The World's Best Creative Art
-          </h2>
+        <div class="mainHeader_container">
+          <div class="mainHeader_content">
+            <h1 class="mainHeader_mainTitle">
+              Airsoft <span class="color_this">Studios</span>
+              <span class="mainHeader_subTitle">
+                Discover The World's Best Creative Art
+              </span>
 
-          <a href="#gallerySection" class="exploreBtn navigLink">Explore</a>
+              <!-- <img src="/assets/images/logo.png" alt="logo" /> -->
+            </h1>
+
+            <a href="#gallerySection" class="exploreBtn navigLink">Explore</a>
+          </div>
         </div>
       </div>
-
-      <img
-        src="/assets/images/Artboard_9-removebg-preview.png"
-        alt="header image"
-        class="header_img"
-      />
-
-      <img
-        src="/assets/images/c4595c90-281e-43dd-9c90-30e2876bdfae-removebg-preview.png"
-        alt="header_img"
-        class="header_img2"
-      />
     </header>
 
     <section class="section" id="showcaseSection">
@@ -142,6 +129,41 @@
                 class="imgSlide"
                 data-slide="3"
               />
+
+              <img
+                src="./assets/images/illustration5.jpg"
+                alt="image slide five"
+                class="imgSlide"
+                data-slide="4"
+              />
+
+              <img
+                src="./assets/images/illustration6.jpg"
+                alt="image slide six"
+                class="imgSlide"
+                data-slide="5"
+              />
+
+              <img
+                src="./assets/images/illustration7.jpg"
+                alt="image slide seven"
+                class="imgSlide"
+                data-slide="6"
+              />
+
+              <img
+                src="./assets/images/illustration8.jpg"
+                alt="image slide eight"
+                class="imgSlide"
+                data-slide="7"
+              />
+
+              <img
+                src="./assets/images/illustration9.jpg"
+                alt="image slide nine"
+                class="imgSlide"
+                data-slide="8"
+              />
             </div>
             <div class="dotsContainer"></div>
           </div>
@@ -153,6 +175,9 @@
 
     <section class="section" id="aboutSection">
       <div class="container">
+        <div class="aboutTitleContainer">
+          <h2 class="subtitle">About AirSoft</h2>
+        </div>
         <div class="about_flexContainer">
           <div class="about_btnContainer">
             <button class="aboutBtn activeBtn" data-id="core statement">
@@ -194,11 +219,11 @@
             </article>
             <article id="core statement" class="aboutArticle activeArticle">
               <p>
-                Airsoft studio is an art studio based in London, We create new
-                ways to develop and display the most brilliant Art designs to
-                the world. We always go the extra mile to create exceptional
-                game and book projects, colorful arts recognized by highlighted
-                top tier companies.
+                Airsoft Studio is the leading art studio in London. We combine
+                the beauty of nature with the competence of a tech company to
+                deliver new ways to develop and design the most advanced
+                artwork, recognized by highlighted top-tier Art companies in the
+                world.
               </p>
             </article>
             <button class="aboutContent_btn">core statement</button>
@@ -217,248 +242,155 @@
       </div>
     </section>
 
-    <section class="section" id="testimonialSection">
+    <section id="testimonialSection">
       <div class="container">
-        <div class="testimonialSectionTitle">
-          <h2 class="subtitle">
-            See what <span class="color_this">our customers </span> <br />
-            say about us
-          </h2>
-          <div class="testimonialContainer">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        Probably the best art studio in the United Kingdom.
-                        Super friendly artists! They were very patient with me,
-                        and guide me through the whole character development
-                        process
-                      </p>
+        <div class="sliderTitleContainer">
+          <h2 class="subtitle">What Our Customers Say</h2>
+        </div>
 
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user1.jpg" alt="user" />
-                        </div>
-                        <div>
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            London, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <div class="testimonialBox">
+          <div class="testimonialSliderContainer">
+            <div class="slideParent">
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user3.png"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  Probably the best art studio in the United Kingdom. Super
+                  friendly artists! They were very patient with me, and guide me
+                  through the whole character development process
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Talia Brodie</h3>
+                  <h4>London, United Kingdom</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        I was delighted to work with this studio, the artists
-                        were committed to great service, and very friendly. Most
-                        importantly, the art result I got was mind-blowing!
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user2.jpg" alt="user" />
-                        </div>
-                        <div>
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            Slough, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user1.jpg"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  I was delighted to work with this studio, the artists were
+                  committed to great service, and very friendly. Most
+                  importantly, the art result I got was mind-blowing!
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Enrique Bonifacino</h3>
+                  <h4>Slough, United Kingdom</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        Whenever I need artwork done, I will be calling this
-                        company. The service was superb! The artists worked as a
-                        team and made the outcome great
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user3.png" alt="user" />
-                        </div>
-                        <div>
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            Gloucester, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user5.png"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  Whenever I need artwork done, I will be calling this company.
+                  The service was superb! The artists worked as a team and made
+                  the outcome great
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Vicki ODonnel</h3>
+                  <h4>Gloucester, Nigeria</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        I can't say enough about this studio, they listen,
-                        execute, and deliver results, which differentiate them
-                        from other studios i have worked with.
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user4.png" alt="user" />
-                        </div>
-                        <div>
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            London, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user2.jpg"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  I can't say enough about this studio, they listen, execute,
+                  and deliver results, which differentiate them from other
+                  studios i have worked with.
+                </p>
+                <div class="testimonialDetail">
+                  <h3>JOHN DOE</h3>
+                  <h4>London, United Kingdom</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        They have been an essential part of my team as they
-                        deliver quality artwork, and have proven to be
-                        exceptional. Can't recommend them enough
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user5.png" alt="user" />
-                        </div>
-                        <div>
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            Gloucester, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user6.png"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  They have been an essential part of my team as they deliver
+                  quality artwork, and have proven to be exceptional. Can't
+                  recommend them enough
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Devika</h3>
+                  <h4>Gloucester, United Kingdom</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        I'll be working with them again, they have an amazing
-                        work ethic, and did an excellent job. I was impressed by
-                        their level of professionalism and work ethic.
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user6.png" alt="user" />
-                        </div>
-                        <div class="testimonialDetails">
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            London, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user7.png"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  I'll be working with them again, they have an amazing work
+                  ethic, and did an excellent job. I was impressed by their
+                  level of professionalism and work ethic.
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Rebecca Dingvean</h3>
+                  <h4>Edinburgh, United Kingdom</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        They explained the step by step process and put me
-                        through everything. It was a great pleasure to work with
-                        them
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user7.png" alt="user" />
-                        </div>
-                        <div class="testimonialDetails">
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            Edinburgh, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user8.png"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  They explained the step by step process and put me through
+                  everything. It was a great pleasure to work with them
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Kelvin Mackey</h3>
+                  <h4>London, United Kingdom</h4>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial">
-                    <img
-                      src="/assets/images/quote.png"
-                      alt="quote"
-                      class="quote"
-                    />
-                    <div class="content">
-                      <p>
-                        They delivered exceptional work, and only stopped when
-                        we were satisfied with the delivery. I was a newbie and
-                        i didn't know alot about artwork, they handled the whole
-                        process for me
-                      </p>
-
-                      <div class="details">
-                        <div class="imgBox">
-                          <img src="/assets/images/user8.png" alt="user" />
-                        </div>
-                        <div class="testimonialDetails">
-                          <h3 class="testimonial_name">John Doe</h3>
-                          <p class="testimonial_location">
-                            London, United Kingdom
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="testimonialCard">
+                <img src="/assets/images/quote.png" alt="quote" class="Quote" />
+                <img
+                  src="/assets/images/user4.png"
+                  alt="user"
+                  class="testimonialImage"
+                />
+                <p>
+                  They delivered exceptional work, and only stopped when we were
+                  satisfied with the delivery. I was a newbie and i didn't know
+                  alot about artwork, they handled the whole process for me
+                </p>
+                <div class="testimonialDetail">
+                  <h3>Joleen</h3>
+                  <h4>London, United Kingdom</h4>
                 </div>
               </div>
             </div>
@@ -643,28 +575,32 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script type="module">
-      import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
-      // import Swiper from 'swiper/swiper-bundle.esm.js'
-      // import 'swiper/swiper-bundle.css'
-      var swiper = new Swiper('.swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      })
-    </script>
+    <div class="overlay">
+      <div class="overlayContent">
+        <button class="overlayBtn">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="overlay_listContainer">
+          <li class="overlay_List">
+            <a href="#aboutSection" class="navigLink"> About us </a>
+          </li>
+
+          <li class="overlay_List">
+            <a href="#portfolioSection" class="navigLink"> Our portfolio </a>
+          </li>
+
+          <li class="overlay_List">
+            <a href="#gallerySection" class="navigLink"> projects </a>
+          </li>
+
+          <li class="overlay_List">
+            <a href="#contactSection" class="navigLink"> contact us </a>
+          </li>
+        </ul>
+
+        <a href="#contactSection" class="overlayContactBtn">Contact Us</a>
+      </div>
+    </div>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

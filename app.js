@@ -22,11 +22,14 @@ const activateDots = count => {
 
 window.addEventListener('load', () => {
   /* NAVBAR LOGIC */
-  document.querySelector('.barsContainer').addEventListener('click', () => {
-    document
-      .querySelector('.navbar_listContainer')
-      .classList.toggle('toggleNav')
-  })
+  const overlay = document.querySelector('.overlay')
+  document
+    .querySelector('.bars')
+    .addEventListener('click', () => overlay.classList.add('openOverlay'))
+
+  document
+    .querySelector('.overlayBtn')
+    .addEventListener('click', () => overlay.classList.remove('openOverlay'))
 
   /* SLIDER LOGIC */
   const imgSlides = document.querySelectorAll('.imgSlide')
@@ -149,16 +152,37 @@ window.addEventListener('load', () => {
     observer.observe(section)
   })
 
-  /*GET FOOTER YEAR */
-  document.querySelector('.getYear').textContent = new Date().getFullYear()
-
   //SECTIONS NAVIGATION LOGIC
   document.querySelectorAll('.navigLink').forEach(link => {
     const href = link.getAttribute('href')
     const id = href.replace('#', '')
     link.addEventListener('click', e => {
       e.preventDefault()
+      if (overlay.classList.contains('openOverlay'))
+        overlay.classList.remove('openOverlay')
       document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
     })
   })
+
+  // TESTIMONIALS SECTION
+  const testimonialCards = document.querySelectorAll('.testimonialCard')
+  const goToTestimonial = testimonialCount =>
+    testimonialCards.forEach(
+      (slides, i) =>
+        (slides.style.transform = `translateX(${
+          100 * (i - testimonialCount)
+        }%)`)
+    )
+
+  let testimonialCount = 0
+  const testimonialMaxCount = testimonialCards.length - 1
+
+  setInterval(() => {
+    goToTestimonial(testimonialCount)
+    testimonialCount++
+    if (testimonialCount > testimonialMaxCount) testimonialCount = 0
+  }, 3000)
+
+  /*GET FOOTER YEAR */
+  document.querySelector('.getYear').textContent = new Date().getFullYear()
 })
