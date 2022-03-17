@@ -23,9 +23,10 @@ const activateDots = count => {
 window.addEventListener('load', () => {
   /* NAVBAR LOGIC */
   const overlay = document.querySelector('.overlay')
-  document
-    .querySelector('.bars')
-    .addEventListener('click', () => overlay.classList.add('openOverlay'))
+  document.querySelector('.bars').addEventListener('click', () => {
+    console.log('clicked')
+    overlay.classList.add('openOverlay')
+  })
 
   document
     .querySelector('.overlayBtn')
